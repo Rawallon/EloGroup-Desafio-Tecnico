@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <img class="logo__img" src="logo.png" alt="">
+            <ul class="nav__menu">
+                <li class="nav__items">Login</li>
+                <li class="nav__items">Registrar</li>
+            </ul>
+        </nav>
+    </header>
+    <section class="container container--form">
+        <div class="content__form">
+            <form action="#">
+                <label htmlFor="user">Usuário</label>
+                <input type="text" name="user">
+                <label htmlFor="passw">Senha</label>
+                <input type="password" name="passw">
+                <label htmlFor="confirmpw">Confirmação Senha</label>
+                <input minlength="8" type="password" name="confirmpw">
+                <button class="button__form" type="submit">Registrar</button>
+            </form>
+
+        </div>
+    </section>
+</body>
+
+</html>
