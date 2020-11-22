@@ -4,7 +4,6 @@ import { login } from '../../actions/auth';
 import {
   ContentForm,
   ButtonForm,
-  InputForm,
   InputField,
   InputLabel,
   FormField,
@@ -47,6 +46,7 @@ const Login = ({ login, isAuthenticated }) => {
             placeholder=""
           />
           <InputLabel
+            typed={username.length > 0}
             onClick={() => {
               userRef.focus();
             }}
@@ -65,6 +65,7 @@ const Login = ({ login, isAuthenticated }) => {
             placeholder=""
           />
           <InputLabel
+            typed={password.length > 0}
             htmlFor="password"
             onClick={() => {
               pwRef.focus();

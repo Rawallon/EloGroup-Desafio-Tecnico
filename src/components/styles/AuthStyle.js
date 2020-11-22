@@ -35,7 +35,7 @@ export const InputForm = styled.input`
 
 export const InputLabel = styled.label`
   position: absolute;
-  top: 23px;
+  top: ${(props) => (props.typed ? '2px' : '23px')};
   left: 14px;
   display: block;
   font-size: 1.25rem;
