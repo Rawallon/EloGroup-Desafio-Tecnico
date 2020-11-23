@@ -22,7 +22,7 @@ export const AlertBox = styled.div`
   color: white;
   cursor: pointer;
   border: 1px solid black;
-
+  z-index: 20;
   &:hover {
     filter: brightness(120%);
   }

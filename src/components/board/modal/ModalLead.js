@@ -6,8 +6,9 @@ import { updateCard } from '../../../actions/leads';
 import { SeeModal } from './SeeModal';
 import { EditModal } from './EditModal';
 import { OportSpliter } from '../../../utils/OportSpliter';
+import { setAlert } from '../../../actions/alert';
 
-const ModalLead = ({ show, hideModal, cards, updateCard }) => {
+const ModalLead = ({ show, hideModal, cards, updateCard, setAlert }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [formData, setFormData] = useState({
     id: '',
@@ -38,6 +39,13 @@ const ModalLead = ({ show, hideModal, cards, updateCard }) => {
   };
 
   const saveChanges = (e) => {
+    if (
+      formData.name === '' ||
+      formData.tel === '' ||
+      formData.email === '' ||
+      formData.oport.join() === ''
+    )
+      return setAlert('Você deve preencher todos os campos', 'danger');
     updateCard(formData);
     setIsEditing(!isEditing);
   };
@@ -91,5 +99,6 @@ const mapStateToProps = (state) => ({
   show: state.modal,
   cards: state.cards,
 });
-
-export default connect(mapStateToProps, { hideModal, updateCard })(ModalLead);
+export default connect(mapStateToProps, { hideModal, updateCard, setAlert })(
+  ModalLead,
+);

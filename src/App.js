@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-
+import React from 'react';
 import Board from './components/board/Board';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
@@ -10,13 +9,13 @@ import { GlobalStyle } from './components/styles/GlobalStyle';
 import Alert from './components/layout/Alert';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import PrivateRoute from './components/PrivateRoute';
-import { loadUser } from './actions/auth';
 import AddBoard from './components/addboard/AddBoard';
 
 function App() {
-  useEffect(() => {
-    Store.dispatch(loadUser());
-  }, []);
+  // Essa função executaria para checar cookies
+  // useEffect(() => {
+  //   Store.dispatch(loadUser());
+  // }, []);
 
   return (
     <Provider store={Store}>

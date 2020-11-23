@@ -18,8 +18,9 @@ import {
 } from '../styles/BoardStyle';
 import { connect } from 'react-redux';
 import { addCard } from '../../actions/leads';
+import { setAlert } from '../../actions/alert';
 
-const AddBoard = ({ addCard }) => {
+const AddBoard = ({ addCard, setAlert }) => {
   const [formData, setFormData] = useState({
     name: '',
     tel: '',
@@ -56,7 +57,10 @@ const AddBoard = ({ addCard }) => {
       .filter((el) => el[0] === true)
       .map((el) => el[1])
       .join();
-    // setFormData({ ...formData, oport: oport });
+
+    if (name === '' || tel === '' || email === '' || oport === '')
+      return setAlert('Você deve preencher todos os campos', 'danger');
+
     addCard({
       ...formData,
       oport: oport,
@@ -165,5 +169,4 @@ const AddBoard = ({ addCard }) => {
     </Container>
   );
 };
-
-export default connect(null, { addCard })(AddBoard);
+export default connect(null, { addCard, setAlert })(AddBoard);
