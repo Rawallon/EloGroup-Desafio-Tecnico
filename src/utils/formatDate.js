@@ -5,7 +5,6 @@ function formatDate(date) {
     day: 'numeric',
     hour: 'numeric',
     minute: 'numeric',
-    // timeZone: 'America/Los_Angeles',
   };
   if (date === undefined) return;
   return new Intl.DateTimeFormat('pt-br', options).format(

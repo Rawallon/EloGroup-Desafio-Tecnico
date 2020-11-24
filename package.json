@@ -1,7 +1,8 @@
 {
-  "name": "elogroup",
+  "name": "elogroup-desafio-tecnico",
   "version": "0.1.0",
   "private": true,
+  "author": "Rawallon Cardoso <rawallon@gmail.com>",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
