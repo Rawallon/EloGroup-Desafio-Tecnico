@@ -31,7 +31,7 @@ export const OportunidadeButton = styled(LeadButton)`
   padding: 14px 20px;
   margin: 8px 0;
   cursor: pointer;
-  width: 100%;
+  width: 20%;
   transition: all 0.2s;
 
   &:hover {

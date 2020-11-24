@@ -52,6 +52,12 @@ const AddBoard = ({ addCard, setAlert }) => {
     setOportunidades(retOpo);
   };
 
+  const enableAllOport = (e) => {
+    setOportunidades(
+      oportunidades.map((oportunidade) => [e.target.checked, oportunidade[1]]),
+    );
+  };
+
   const sendFormData = () => {
     const oport = oportunidades
       .filter((el) => el[0] === true)
@@ -127,13 +133,12 @@ const AddBoard = ({ addCard, setAlert }) => {
             <thead>
               <tr>
                 <AddTableHead>
-                  <OportunidadeButton onClick={(e) => criarOportunidade()}>
-                    Adicionar
-                  </OportunidadeButton>
+                  <input type="checkbox" onChange={(e) => enableAllOport(e)} />
                 </AddTableHead>
                 <AddTableHead>
                   <FormField>
                     <InputAdd
+                      style={{ width: '75%', marginRight: '15px' }}
                       name="oportunidade"
                       value={novaOportunidade}
                       onChange={(e) => setNovaOportunidade(e.target.value)}
@@ -141,6 +146,9 @@ const AddBoard = ({ addCard, setAlert }) => {
                     <InputLabel htmlFor="oportunidade">
                       Oportunidade:
                     </InputLabel>
+                    <OportunidadeButton onClick={(e) => criarOportunidade()}>
+                      Adicionar
+                    </OportunidadeButton>
                   </FormField>
                 </AddTableHead>
               </tr>

@@ -10,11 +10,11 @@ import { setAlert } from './alert';
 export const loadUser = () => async (dispatch) => {
   try {
     // Essa função tentaria carregar usuário através da API
-    //    throw Error();
-    // TODO
-    dispatch({
-      type: USER_LOADED,
-    });
+    // dispatch({
+    //   type: USER_LOADED,
+    // });
+
+    throw Error(); //Isso não deveria estar aqui, apenas para demonstração!
   } catch (error) {
     dispatch({
       type: AUTH_ERROR,
@@ -53,8 +53,13 @@ export const register = ({ email, password }) => async (dispatch) => {
     //   type: REGISTER_SUCCESS,
     //   payload: res.data,
     // });
+    // dispatch(loadUser());
 
-    dispatch(loadUser());
+    //Isso não deveria estar aqui, apenas para demonstração!
+    dispatch({
+      type: USER_LOADED,
+    });
+    //
   } catch (error) {
     const errors = error.response.data.errors;
     if (errors) {
