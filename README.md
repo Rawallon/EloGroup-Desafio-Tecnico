@@ -28,14 +28,15 @@ Processo Seletivo 2020/2
    - [x] O Lead será com o Status de "Cliente em Potencial"
 
 ## Screenshots
-[Login](prints/1login.png)
-
-[Registro](prints/2register.png)
-
-[Leads](prints/3lead.png)
-
-[Ver Lead](prints/4ver-lead.png)
-
-[Editar Lead](prints/5editando-lead.png)
-
-[Adicionar](prints/6adicionar-lead.png)
+### Login
+![Login](prints/1login.png)
+### Registro
+![Registro](prints/2register.png)
+### Listar Leads
+![Leads](prints/3lead.png)
+### Ver Lead
+![Ver Lead](prints/4ver-lead.png)
+### Editar Lead
+![Editar Lead](prints/5editando-lead.png)
+### Adicionar Lead
+![Adicionar](prints/6adicionar-lead.png)
