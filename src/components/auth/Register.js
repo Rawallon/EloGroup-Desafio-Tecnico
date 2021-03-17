@@ -14,6 +14,7 @@ import {
 import { Container } from '../styles/GlobalStyle';
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
+  // Mesmo formato do login
   const [formData, setFormData] = useState({
     username: '',
     password: '',
@@ -21,7 +22,6 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   });
   const { username, password, password2 } = formData;
 
-  //Redir se estiver logado!
   if (isAuthenticated) {
     return <Redirect to="/board" />;
   }

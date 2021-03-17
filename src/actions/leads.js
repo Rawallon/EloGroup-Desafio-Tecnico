@@ -21,7 +21,12 @@ export const updateCard = (cardData) => (dispatch) => {
     payload: cardData,
   });
 };
+
 export const moveCard = (to, from, cardId) => (dispatch) => {
+  // ParseInt foi preverivel a Number ou +
+  // Por que mesmo que seja uma string
+  // ParseInt sempre retornara o numero contido naquela string
+  console.log(from.droppableId, to.droppableId);
   if (
     (parseInt(from.droppableId) + 1 !== parseInt(to.droppableId)) &
     (from.droppableId !== to.droppableId)

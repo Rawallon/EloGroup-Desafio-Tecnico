@@ -11,7 +11,7 @@ const Alert = ({ alerts, remAlert }) => {
           <AlertBox
             type={alert.alertType}
             key={alert.id}
-            onClick={(e) => remAlert(alert.id)}>
+            onClick={(e) => remAlert(alert.id, alert.timeName)}>
             {alert.msg}
           </AlertBox>
         ))}

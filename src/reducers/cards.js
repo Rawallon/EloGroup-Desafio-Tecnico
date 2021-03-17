@@ -11,7 +11,7 @@ const initialState = {
     oport: 'Produto Digital',
     desc:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris scelerisque viverra libero. Duis volutpat consectetur laoreet. Mauris vitae lorem ac turpis facilisis lacinia sed ut libero. Suspendisse vestibulum placerat elit, vitae condimentum quam tempus at. Nunc porttitor ultrices orci ut lacinia.',
-    list: '0-list',
+    list: '1-list',
   },
   'card-7c1wufqqk': {
     id: 'card-7c1wufqqk',
